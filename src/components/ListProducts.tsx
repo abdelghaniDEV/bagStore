@@ -4,7 +4,6 @@ import FilterProduct from "./FilterProduct";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,

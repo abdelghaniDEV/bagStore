@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import ReviewCart from "./ReviewCart";
 import { useRouter, useSearchParams } from "next/navigation";
-import { getAllReviews, rating } from "@/actions/reviews.actions";
+import { getAllReviews } from "@/actions/reviews.actions";
 import { reviewsItem } from "@/type";
 import Pagination from "./Pagination";
 import { Frown, Laugh, MessageSquare, Smile, Star } from "lucide-react";
@@ -25,9 +25,9 @@ type reviews = {
   data: reviewsItem[];
 };
 
-type Review = {
-  review: reviewsItem;
-};
+// type Review = {
+//   review: reviewsItem;
+// };
 
 export default function ListReviews() {
   const searchParams = useSearchParams();

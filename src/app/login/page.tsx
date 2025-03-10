@@ -12,6 +12,8 @@ type loginData = {
   password: string;
 };
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 export default function Login() {
   const router = useRouter();
   const [formData, setFormData] = useState<loginData>({
@@ -65,7 +67,7 @@ export default function Login() {
       try {
         setLoading(true);
         const response = await axios.post(
-          `http://localhost:2000/api/users/login`,
+          `${apiUrl}/users/login`,
           formData,
           { withCredentials: true }
         );

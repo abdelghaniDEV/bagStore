@@ -101,7 +101,7 @@ export default function EditeCategory() {
           </div>
         </div>
         <div className="flex justify-end gap-5">
-          <Button onClick={(e) => handleSubmit()}>Save Category</Button>
+          <Button onClick={() => handleSubmit()}>Save Category</Button>
         </div>
       </div>
       {/*... */}
