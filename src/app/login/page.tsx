@@ -69,7 +69,7 @@ export default function Login() {
         const response = await axios.post(
           `${apiUrl}/users/login`,
           formData,
-          { withCredentials: true }
+         
         );
         setLoading(false);
         if (response.status === 200) {
