@@ -8,6 +8,15 @@ body {
   font-family: "Outfit", serif;
 }
 
+.ProseMirror:focus {
+  outline: none !important;
+}
+
+option {
+  font-family: "Outfit", serif !important;
+
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

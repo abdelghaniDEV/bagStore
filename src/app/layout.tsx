@@ -4,6 +4,7 @@ import "./globals.css";
 import { headers } from "next/headers";
 import Header from "@/components/Header";
 import LayoutWrapper from "@/LayoutWrapper";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +26,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* {showHeaderAndSidebar && <Header />} */}
+        <ToastContainer />
+
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

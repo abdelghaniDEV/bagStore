@@ -1,20 +1,17 @@
-import FilterProduct from "@/components/FilterProduct";
-import ListProducts from "@/components/ListProducts";
+import ListReviews from "@/components/ListReviews";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Box, Filter, Grid2X2, List, ListFilter, Search } from "lucide-react";
-import Link from "next/link";
+import { Box, LayoutDashboard, Link, MessageSquare, Star } from "lucide-react";
 import React from "react";
 
-export default function Products() {
+export default function Reviews() {
   return (
     <div>
       <div className=" lg:flex justify-between items-center mb-4 ">
         <div className="flex items-center gap-1 ">
-          <Box className="h-10 w-10" />
-          <h1 className="text-[25px] lg:text-[30px] font-[600] ">Products</h1>
+          <MessageSquare className="h-10 w-10" />
+          <h1 className="text-[25px] lg:text-[30px] font-[600] ">Reviews</h1>
         </div>
-        <Link
+        {/* <Link
           href={"/admin/products/create-product"}
           className="flex justify-end gap-5"
         >
@@ -22,9 +19,13 @@ export default function Products() {
             <span>Create Product</span>
             <span className="text-[30px] font-[400]">+</span>
           </Button>
-        </Link>
+        </Link> */}
+        <Button className="flex items-center gap-1">
+          <span>Create Reviews</span>
+        </Button>
       </div>
-      <ListProducts />
+      
+      <ListReviews />
     </div>
   );
 }
