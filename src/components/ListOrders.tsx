@@ -34,7 +34,7 @@ export default function ListOrders() {
 
   useEffect(() => {
     router.push(`?page=${page}${search && `&search=${search}`}`);
-  }, [page , search]);
+  }, [page , search , router]);
 
   useEffect(() => {
     const fetchOrders = async () => {

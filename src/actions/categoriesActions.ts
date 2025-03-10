@@ -33,7 +33,7 @@ export const createCategory = async (data: { name: string; image?: any }) => {
 // get all CretaCategories
 export const getAllCategories = async () => {
   try {
-    const response = await fetch("${apiUrl}/categories");
+    const response = await fetch(`${apiUrl}/categories`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch categories");

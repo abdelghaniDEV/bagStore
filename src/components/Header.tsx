@@ -15,11 +15,8 @@ type headerProps = {
 export default function Header({ setShowSidebar }: headerProps) {
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
-    dispatch(fetchCategories()); // Fetch categories on header load (client side)
-    // return () => {
-    //   // Cleanup function
-    // }; // Cleanup function to unmount the effect
-  }, []);
+    dispatch(fetchCategories()); 
+  }, [dispatch]);
   return (
     <div className="py-3 flex items-center justify-between">
       <div className="lg:hidden">

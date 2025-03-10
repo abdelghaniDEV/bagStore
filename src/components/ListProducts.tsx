@@ -34,7 +34,7 @@ export default function ListProducts() {
   useEffect(() => {
     router.push(`?page=${page}&search=${search}&stock=${stock}&category=${category}`);
     console.log(category)
-  }, [page, search , category , stock]);
+  }, [page, search , category , stock , router]);
 
   useEffect(() => {
     const FetchData = async () => {
