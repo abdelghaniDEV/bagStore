@@ -1,11 +1,5 @@
 "use server";
-import axios from "axios";
 import { revalidatePath } from "next/cache";
-
-type CretaCategory = {
-  name: string;
-  image?: File;
-};
 
 // create a new CretaCategory
 export const createCategory = async (data: { name: string; image?: any }) => {

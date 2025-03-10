@@ -2,23 +2,17 @@
 import { getSingleOrder } from "@/actions/ordersActions";
 import OrdersItems from "@/components/OrdersItems";
 import { Button } from "@/components/ui/button";
-import ButtonDelete from "@/components/ui/ButtonDelete";
-import ButtonEdit from "@/components/ui/ButtonEdit";
 import { Card } from "@/components/ui/card";
-import { orderItem, Product } from "@/type";
+import { orderItem } from "@/type";
 import {
-  ArrowLeft,
-  Car,
   Edit,
   Mail,
-  MapPin,
   Phone,
   Trash,
   User,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 
 import React, { useEffect, useState } from "react";
 
@@ -31,7 +25,6 @@ const statusColors: Record<string, string> = {
 };
 
 export default function OrderDetalis() {
-  const router = useRouter();
   const params = useParams();
   const id = params.id as string;
   const [order, setOrder] = useState<orderItem>();

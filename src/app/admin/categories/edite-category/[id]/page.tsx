@@ -1,11 +1,10 @@
 "use client";
-import { createCategory } from "@/actions/categoriesActions";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { fetchCategories } from "@/redux/slices/categoriesSlice";
-import { AppDispatch, RootState } from "@/redux/store";
+import { AppDispatch } from "@/redux/store";
 import axios from "axios";
 import { ArrowLeft, ImageUp } from "lucide-react";
 import Image from "next/image";
@@ -19,7 +18,7 @@ type data = {
   image?: any;
 };
 
-async function fetchCategory(id: String) {
+async function fetchCategory(id: string) {
   try {
     const response = await axios(`http://localhost:2000/api/categories/${id}`);
     console.log("success", response);
@@ -29,11 +28,11 @@ async function fetchCategory(id: String) {
   }
 }
 
-export default function page() {
+export default function EditeCategory() {
   const dispatch = useDispatch<AppDispatch>();
   const [data, setData] = useState<data>({
     name: "",
-    image: "",
+    
   });
 
   const [prevUrl, setPrevUrl] = useState<any>();

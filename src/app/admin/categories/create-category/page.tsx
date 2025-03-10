@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import axios from "axios";
 import { ArrowLeft, ImageUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,16 +11,16 @@ import React, { useState } from "react";
 
 type data = {
   name: string;
-  image?: any;
+  image?: FileList ;
 };
 
-export default function page() {
+export default function CreateCategory() {
   const [data, setData] = useState<data>({
     name: "",
-    image: "",
+    
   });
   const [error, setError] = useState<String>("");
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     if (data.name === "") {
       setError("Name is required");
@@ -33,11 +32,11 @@ export default function page() {
     try {
       const response = await createCategory(data)
       console.log("success Submit", response);
-    } catch (err: any) {
+    } catch (err) {
       console.error("Error", err);
-      if (err.response.status) {
-        setError(err.response.data.message);
-      }
+      // if (err.response.status) {
+      //   setError(err.response.data.message);
+      // }
     }
   };
   return (
@@ -101,7 +100,7 @@ export default function page() {
                 className="hidden"
                 multiple
                 onChange={(e) =>
-                  setData((prev: any) => {
+                  setData((prev: data) => {
                     return { ...prev, image: e.target.files };
                   })
                 }

@@ -73,7 +73,7 @@ export const getAllProducts = async (
   }
 };
 
-export const getSingleProduct = async (id: String) => {
+export const getSingleProduct = async (id: string) => {
   try {
     const response = await fetch(`http://localhost:2000/api/products/${id}`);
     if (!response.ok) {

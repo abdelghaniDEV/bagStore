@@ -59,7 +59,7 @@ export const changeStatus = async (orderID: string, status: string) => {
   }
 };
 
-export const getSingleOrder = async (id: String) => {
+export const getSingleOrder = async (id: string) => {
   try {
     const response = await fetch(`http://localhost:2000/api/orders/${id}`);
 

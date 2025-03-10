@@ -1,12 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, Plus } from "lucide-react";
+import { LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import {
   Table,
   TableBody,
   TableCaption,
-  TableCell,
+
   TableHead,
   TableHeader,
   TableRow,
@@ -22,7 +22,7 @@ type Category = {
   created_at: string;
 };
 
-export default function page() {
+export default function Categories() {
   const Categories = useSelector(
     (state: RootState) => state?.categories
   ) as Category[];
