@@ -77,7 +77,7 @@ export default function Login() {
           router.push('/admin');
         }
       } catch (e) {
-        console.log("Error connecting to server");
+        console.log("Error connecting to server" , e);
         setLoading(false);
         setErrorServer("An error occurred while connecting to the server");
         return;
