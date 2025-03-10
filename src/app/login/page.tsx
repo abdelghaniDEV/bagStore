@@ -31,7 +31,7 @@ export default function Login() {
 
   const checkData = () => {
     let isValid: boolean = true;
-    let tempErrors = { ...errors };
+    const tempErrors = { ...errors };
 
     // check email
     if (!formData.email) {
