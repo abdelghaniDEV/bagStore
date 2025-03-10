@@ -39,7 +39,7 @@ export default function ListReviews() {
 
   useEffect(() => {
     router.push(`?page=${page}`);
-  }, [page]);
+  }, [page ,router]);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -56,7 +56,7 @@ export default function ListReviews() {
       }
     };
     fetchReviews();
-  }, [page]);
+  }, [page , loading]);
 
   return (
     <div>

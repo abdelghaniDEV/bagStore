@@ -38,14 +38,14 @@ export default function SelectCategory({
 
   useEffect(() => {
     setSelectedCategory(formData.category);
-  }, [formData]);
+  }, [formData ]);
 
   useEffect(() => {
     setFormData((prevData: any) => ({
       ...prevData,
       category: selectedCategory,
     }));
-  }, [selectedCategory]);
+  }, [selectedCategory , setFormData]);
 
   const handelSelectChange = (e: string) => {
     if (!selectedCategory.includes(e)) {
