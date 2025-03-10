@@ -14,8 +14,8 @@ const TextEditor = ({ formData, setFormData }: TextEditorProps) => {
 
   useEffect(() => {
     setContent(formData.description); // Avoid undefined issues
-    console.log("content",content);
-  }, [formData.description]);
+
+  }, [formData.description , content]);
 
   const handleContentChange = (newContent: string) => {
     setContent(newContent);

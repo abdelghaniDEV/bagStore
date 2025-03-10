@@ -27,7 +27,8 @@ type ordersType = {
 export default function ListOrders() {
   const searchParams = useSearchParams();
   const [orders, setOrders] = useState<ordersType>();
-  const [page, setPage] = useState(searchParams.get("page") || "1");
+  // const [page, setPage] = useState(searchParams.get("page") || "1");
+  const page = "1"
   const [search, setSearch] = useState(searchParams.get("search") || "");
   const [refresh, setRefresh] = useState(true);
   const router = useRouter();

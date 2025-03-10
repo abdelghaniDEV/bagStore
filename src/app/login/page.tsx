@@ -62,6 +62,8 @@ export default function Login() {
 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
     e.preventDefault();
     if (checkData()) {
       try {
