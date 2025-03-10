@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import axios from "axios";
 import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 type loginData = {
   email: string;
@@ -25,7 +25,7 @@ export default function Login() {
 
   const [loading, setLoading] = useState(false);
 
-  const [errorServer, setErrorServer] = useState<String>("");
+  const [errorServer, setErrorServer] = useState<string>("");
 
   const checkData = () => {
     let isValid: boolean = true;
@@ -77,6 +77,7 @@ export default function Login() {
       } catch (e) {
         console.log("Error connecting to server");
         setLoading(false);
+        setErrorServer("An error occurred while connecting to the server");
         return;
       }
     }

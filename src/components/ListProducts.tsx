@@ -26,7 +26,8 @@ export default function ListProducts() {
   const [category, setCategory] = useState(
     searchParams.get("category") || ""
   );
-  const [limit, setLimit] = useState("10");
+  // const [limit, setLimit] = useState("10");
+  const limit = "10";
   const [isDelete, setIsDelete] = useState<string>("");
   const [totalPages, setTotalPages] = useState();
   const router = useRouter();

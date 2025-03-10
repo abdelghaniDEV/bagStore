@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { headers } from "next/headers";
-import Header from "@/components/Header";
 import LayoutWrapper from "@/LayoutWrapper";
 import { ToastContainer } from "react-toastify";
 

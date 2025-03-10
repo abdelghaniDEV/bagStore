@@ -1,6 +1,6 @@
 import ListReviews from "@/components/ListReviews";
 import { Button } from "@/components/ui/button";
-import { Box, LayoutDashboard, Link, MessageSquare, Star } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import React from "react";
 
 export default function Reviews() {

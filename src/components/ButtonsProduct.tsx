@@ -20,10 +20,10 @@ import { deleteProduct } from "@/actions/productsActions";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 
-interface ButtonsProductProps {
-  product: any;
-  setIsDelete: (productId: string) => void;
-}
+// interface ButtonsProductProps {
+//   product: any;
+//   setIsDelete: (productId: string) => void;
+// }
 
 export default function ButtonsProduct({ product, setIsDelete }: any) {
   const [open, setOpen] = useState(false); // Manage dialog open state

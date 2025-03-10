@@ -1,9 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { X } from "lucide-react";
-import { useDispatch } from "react-redux";
-import { fetchCategories } from "@/redux/slices/categoriesSlice";
-import type { AppDispatch } from "@/redux/store";
 
 type SidebarProps = {
   showSidebar: boolean;

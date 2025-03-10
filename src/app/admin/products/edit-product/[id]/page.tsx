@@ -4,10 +4,9 @@ import { useParams, useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ImageUp, Plus, Trash, X } from "lucide-react";
+import { ArrowLeft, ImageUp} from "lucide-react";
 import {
   getSingleProduct,
-  postProduct,
   updateProduct,
 } from "@/actions/productsActions";
 import SelectCategory from "@/components/SelectCategory";
@@ -172,11 +171,12 @@ export default function EditProduct() {
     console.log("Submit", formData);
     setLoading(true);
     try {
-      const response = await updateProduct(id, formData);
+       await updateProduct(id, formData);
       toast.success("Product successfully added");
       router.push("/admin/products");
-    } catch (error) {
+    } catch (err) {
       toast.error("Failed to add product");
+      console.error(err);
     } finally {
       setLoading(false);
     }

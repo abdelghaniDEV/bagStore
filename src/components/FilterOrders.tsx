@@ -5,10 +5,10 @@ import { Search } from "lucide-react";
 type FilterOrdersProps = {
   setSearch: React.Dispatch<React.SetStateAction<string>>;
   search: string;
-  setRefresh: React.Dispatch<React.SetStateAction<boolean>>;
+  setRefresh?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function FilterOrders({ setSearch , search , setRefresh} : FilterOrdersProps) {
+export default function FilterOrders({ setSearch , search} : FilterOrdersProps) {
   return (
     <div>
       <div className="flex items-center justify-between ">

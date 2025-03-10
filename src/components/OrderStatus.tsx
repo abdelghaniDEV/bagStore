@@ -15,7 +15,6 @@ const statusColors: Record<string, string> = {
   delivered: "bg-[#F0FBF4] text-[#13B458] border-[#13B458]",
   cancelled: "bg-[#FCF0EF] text-[#EA6B6D] border-[#EA6B6D]",
 };
-import { ToastContainer, toast } from "react-toastify";
 
 export const OrderStatus = ({
   status,

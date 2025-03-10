@@ -1,6 +1,8 @@
 "use server";
 import { revalidatePath } from "next/cache";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 // create a new CretaCategory
 export const createCategory = async (data: { name: string; image?: any }) => {
   const formData = new FormData();
@@ -11,7 +13,7 @@ export const createCategory = async (data: { name: string; image?: any }) => {
   console.log("data")
 
   try {
-    const response = await fetch("http://localhost:2000/api/categories", {
+    const response = await fetch("${apiUrl}/categories", {
       method: "POST",
       body: formData,
     });
@@ -31,7 +33,7 @@ export const createCategory = async (data: { name: string; image?: any }) => {
 // get all CretaCategories
 export const getAllCategories = async () => {
   try {
-    const response = await fetch("http://localhost:2000/api/categories");
+    const response = await fetch("${apiUrl}/categories");
 
     if (!response.ok) {
       throw new Error("Failed to fetch categories");
@@ -50,7 +52,7 @@ export const getAllCategories = async () => {
 export const deleteCategory = async (categoryID: string) => {
   try {
     const response = await fetch(
-      `http://localhost:2000/api/categories/${categoryID}`,
+      `${apiUrl}/categories/${categoryID}`,
       {
         method: "DELETE",
       }

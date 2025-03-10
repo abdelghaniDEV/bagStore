@@ -1,8 +1,7 @@
-import FilterProduct from "@/components/FilterProduct";
+
 import ListProducts from "@/components/ListProducts";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Box, Filter, Grid2X2, List, ListFilter, Search } from "lucide-react";
+import { Box } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 

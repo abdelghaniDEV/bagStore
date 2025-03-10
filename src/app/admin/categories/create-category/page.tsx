@@ -19,7 +19,7 @@ export default function CreateCategory() {
     name: "",
     
   });
-  const [error, setError] = useState<String>("");
+  const [error, setError] = useState<string>("");
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     if (data.name === "") {

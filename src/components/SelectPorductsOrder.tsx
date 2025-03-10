@@ -13,12 +13,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "./ui/button";
-import { Value } from "@radix-ui/react-select";
 import { Trash } from "lucide-react";
 import Pagination from "./Pagination";
 import { Skeleton } from "./ui/skeleton";
-import ListProducts from "./ListProducts";
 
 export default function SelectPorductsOrder() {
   const [search, setSerch] = useState<string>("");
@@ -78,7 +75,7 @@ export default function SelectPorductsOrder() {
 
   const listSketelon = () => {
     return Array.from({ length: 5 }, (_, index) => (
-      <Card className=" flex gap-4 p-2">
+      <Card className=" flex gap-4 p-2" key={index}>
         <Skeleton className="w-[40px] h-[60px]" />
         <div className="flex flex-col gap-1">
           <Skeleton className="h-4 w-[300px]" />

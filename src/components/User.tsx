@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
-import { Accessibility, Award, LogOut, UserCircle } from "lucide-react";
+import {Award, LogOut, UserCircle } from "lucide-react";
 
 export default function User() {
   const [showDrop, setShowDrop] = useState(false);

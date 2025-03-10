@@ -14,6 +14,8 @@ type formDataParameter = {
   color: string[];
 };
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 export const postProduct = async (formData: formDataParameter) => {
   const sendData = new FormData();
 
@@ -35,7 +37,7 @@ export const postProduct = async (formData: formDataParameter) => {
   }
 
   try {
-    const response = await fetch("http://localhost:2000/api/products", {
+    const response = await fetch("${apiUrl}/products", {
       method: "POST",
       body: sendData,
     });
@@ -61,7 +63,7 @@ export const getAllProducts = async (
 ) => {
   try {
     const response = await fetch(
-      `http://localhost:2000/api/products?page=${page}&limit=${limit}&search=${search}&stock=${stock}&category=${category}`
+      `${apiUrl}/products?page=${page}&limit=${limit}&search=${search}&stock=${stock}&category=${category}`
     );
     if (!response.ok) {
       throw new Error("Failed to get products");
@@ -75,7 +77,7 @@ export const getAllProducts = async (
 
 export const getSingleProduct = async (id: string) => {
   try {
-    const response = await fetch(`http://localhost:2000/api/products/${id}`);
+    const response = await fetch(`${apiUrl}/products/${id}`);
     if (!response.ok) {
       throw new Error("Failed to get products");
     }
@@ -89,7 +91,7 @@ export const getSingleProduct = async (id: string) => {
 export const deleteProduct = async (productID: string) => {
   try {
     const response = await fetch(
-      `http://localhost:2000/api/products/${productID}`,
+      `${apiUrl}/products/${productID}`,
       {
         method: "DELETE",
       }
@@ -160,7 +162,7 @@ export const updateProduct = async (
 
   try {
     const response = await fetch(
-      `http://localhost:2000/api/products/${productId}`,
+      `${apiUrl}/products/${productId}`,
       {
         method: "PUT",
         body: sendData,

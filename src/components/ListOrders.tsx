@@ -7,8 +7,6 @@ import FilterOrders from "./FilterOrders";
 import {
   Table,
   TableBody,
-  TableCaption,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,

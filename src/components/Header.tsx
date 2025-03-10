@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { Input } from "./ui/input";
-import { Bell, Menu, Search } from "lucide-react";
-import Image from "next/image";
+import { Menu, Search } from "lucide-react";
 import User from "./User";
 import Notification from "./Notification";
 import { useDispatch } from "react-redux";

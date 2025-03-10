@@ -1,7 +1,6 @@
 import React from "react";
 import { TableCell, TableRow } from "./ui/table";
 import { orderItem } from "@/type";
-import { EllipsisVertical } from "lucide-react";
 import ButtonsOrder from "./ButtonsOrder";
 import { OrderStatus } from "./OrderStatus";
 

@@ -58,8 +58,8 @@ export default function EditeCategory() {
     loadCategory();
   }, [id]);
 
-  const [error, setError] = useState<String>("");
-  const handleSubmit = async (e: any) => {
+  const [error, setError] = useState<string>("");
+  const handleSubmit = async () => {
     if (data.name) {
       const formData = new FormData();
       formData.append("name", data.name);
@@ -101,7 +101,7 @@ export default function EditeCategory() {
           </div>
         </div>
         <div className="flex justify-end gap-5">
-          <Button onClick={(e) => handleSubmit(e)}>Save Category</Button>
+          <Button onClick={(e) => handleSubmit()}>Save Category</Button>
         </div>
       </div>
       {/*... */}

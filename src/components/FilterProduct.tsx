@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { Grid2X2, List, ListFilter, Search } from "lucide-react";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import {
   Select,
   SelectContent,
@@ -14,17 +13,17 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { Category } from "@/type";
 
-interface FilterProductProps {
-  search: string;
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
-}
+// interface FilterProductProps {
+//   search: string;
+//   setSearch: React.Dispatch<React.SetStateAction<string>>;
+// }
 
 export default function FilterProduct({
   search,
   setSearch,
-  category,
+ 
   setCategory,
-  stock,
+  
   setStock,
 }: {
   search: string;

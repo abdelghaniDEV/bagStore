@@ -368,6 +368,7 @@ export default function CreateProduct() {
                 {formData?.color.map((color, index) => {
                   return (
                     <div
+                    key={index}
                       className="bg-[#F5CAAB bg-main-primary w-10 h-10 relative text-center uppercase rounded-[5px] cursor-pointer"
                       onClick={() => handleRemoveColor(color)}
                       style={{

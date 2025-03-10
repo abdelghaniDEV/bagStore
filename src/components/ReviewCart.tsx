@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { TableCell, TableRow } from "./ui/table";
 import { reviewsItem } from "@/type";
 import { EllipsisVertical, Eye, Star, Trash } from "lucide-react";
-import ButtonDelete from "./ui/ButtonDelete";
-import ButtonView from "./ui/ButtonView";
 import {
   Dialog,
   DialogContent,
@@ -13,7 +11,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { deletReviews } from "@/actions/reviews.actions";
-import { ToastContainer, toast } from "react-toastify";
+import {toast } from "react-toastify";
 import {
   DropdownMenu,
   DropdownMenuContent,

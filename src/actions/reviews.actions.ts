@@ -11,10 +11,12 @@ export type rating = {
   created_at: Date;
 };
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 export const getAllReviews = async (page: string, limit: string) => {
   try {
     const response = await fetch(
-      `http://localhost:2000/api/ratings?page=${page}&limit=${limit}`
+      `${apiUrl}/ratings?page=${page}&limit=${limit}`
     );
     if (!response.ok) {
       throw new Error("Failed to get products");
@@ -28,7 +30,7 @@ export const getAllReviews = async (page: string, limit: string) => {
 
 export const deletReviews = async ( id : string) => {
   try {
-    const response = await fetch(`http://localhost:2000/api/ratings/${id}`, {
+    const response = await fetch(`${apiUrl}/ratings/${id}`, {
       method: "DELETE",
     });
     if (!response.ok) {

@@ -1,4 +1,4 @@
-import { Box, LayoutDashboard, LayoutGrid, ShoppingBag, Tags, UserRoundCog, Users } from "lucide-react";
+import { Box, LayoutDashboard, LayoutGrid, ShoppingBag, UserRoundCog, Users } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 

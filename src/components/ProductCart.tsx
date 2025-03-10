@@ -1,6 +1,5 @@
 import React from "react";
 import { TableCell, TableRow } from "./ui/table";
-import { Dot, EllipsisVertical } from "lucide-react";
 import noImage from "../assets/no-image.jpg";
 import Image from "next/image";
 import ButtonsProduct from "./ButtonsProduct";

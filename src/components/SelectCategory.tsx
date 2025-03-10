@@ -53,7 +53,7 @@ export default function SelectCategory({
     }
   };
 
-  const removeSelectedCategory = (category: String) => {
+  const removeSelectedCategory = (category: string) => {
     setSelectedCategory(selectedCategory.filter((c) => c !== category));
   };
   return (
@@ -67,7 +67,7 @@ export default function SelectCategory({
             <SelectValue placeholder="Select Category" />
           </SelectTrigger>
           <SelectContent>
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <SelectItem key={category._id} value={category._id}>
                 {category.name}
               </SelectItem>

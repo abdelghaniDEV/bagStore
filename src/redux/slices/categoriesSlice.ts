@@ -1,6 +1,6 @@
 import { getAllCategories } from "@/actions/categoriesActions";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+
 
 
 export const fetchCategories = createAsyncThunk(

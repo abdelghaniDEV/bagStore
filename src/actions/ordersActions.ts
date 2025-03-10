@@ -1,5 +1,7 @@
 "use server";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 export const getAllOrders = async (
   page: string,
   limit: string,
@@ -7,7 +9,7 @@ export const getAllOrders = async (
 ) => {
   try {
     const response = await fetch(
-      `http://localhost:2000/api/orders?page=${page}&limit=${limit}${
+      `${apiUrl}/orders?page=${page}&limit=${limit}${
         search && `&search=${search}`
       }`
     );
@@ -22,7 +24,7 @@ export const getAllOrders = async (
 export const deletOrders = async (orderID: string) => {
   try {
     const response = await fetch(
-      `http://localhost:2000/api/orders/${orderID}`,
+      `${apiUrl}/orders/${orderID}`,
       {
         method: "DELETE",
       }
@@ -38,7 +40,7 @@ export const changeStatus = async (orderID: string, status: string) => {
   console.log(status, orderID);
   try {
     const response = await fetch(
-      `http://localhost:2000/api/orders/${orderID}/status`,
+      `${apiUrl}/orders/${orderID}/status`,
       {
         method: "PUT",
         headers: {
@@ -61,7 +63,7 @@ export const changeStatus = async (orderID: string, status: string) => {
 
 export const getSingleOrder = async (id: string) => {
   try {
-    const response = await fetch(`http://localhost:2000/api/orders/${id}`);
+    const response = await fetch(`${apiUrl}/orders/${id}`);
 
     return await response.json();
   } catch (error) {

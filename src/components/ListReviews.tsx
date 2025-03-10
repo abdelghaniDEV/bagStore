@@ -49,6 +49,7 @@ export default function ListReviews() {
         setReviews(response);
         console.log(response);
         setLoading(false);
+       console.log(loading)
       } catch (error) {
         console.error("Error fetching reviews:", error);
         setLoading(false);
