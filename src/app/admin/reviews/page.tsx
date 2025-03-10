@@ -1,7 +1,7 @@
 import ListReviews from "@/components/ListReviews";
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function Reviews() {
   return (
@@ -24,8 +24,8 @@ export default function Reviews() {
           <span>Create Reviews</span>
         </Button>
       </div>
+      <Suspense fallback={<p>Loading...</p>}><ListReviews /></Suspense>
       
-      <ListReviews />
     </div>
   );
 }
