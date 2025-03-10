@@ -2,7 +2,7 @@ import ListOrders from "@/components/ListOrders";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function Orders() {
   return (
@@ -22,8 +22,9 @@ export default function Orders() {
           </Button>
         </Link>
       </div>
-
-      <ListOrders />
+      <Suspense fallback={<p>Loading...</p>}>
+        <ListOrders />
+      </Suspense>
     </div>
   );
 }

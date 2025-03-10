@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Box } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { Suspense } from "react";
 
 export default function Products() {
   return (
@@ -23,7 +24,9 @@ export default function Products() {
           </Button>
         </Link>
       </div>
-      <ListProducts />
+      <Suspense fallback={<p>Loading...</p>}>
+        <ListProducts />
+      </Suspense>
     </div>
   );
 }
